@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CLJ-r1-XUJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qs3-t9-bNA">
+            <objects>
+                <navigationController id="CLJ-r1-XUJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WWd-YZ-31s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ieZ-Ys-EVs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psD-i6-KHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322" y="425"/>
+        </scene>
+        <!--网易新闻-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdY-Xc-ut1" userLabel="标签栏">
+                                <rect key="frame" x="0.0" y="64" width="600" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ZsF-Sk-RRa"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idA-mz-jcH" userLabel="内容栏">
+                                <rect key="frame" x="0.0" y="99" width="600" height="501"/>
+                                <color key="backgroundColor" red="0.22004376449999999" green="1" blue="0.1564481492" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="idA-mz-jcH" secondAttribute="bottom" id="FFf-fK-LPX"/>
+                            <constraint firstAttribute="trailing" secondItem="OdY-Xc-ut1" secondAttribute="trailing" id="Hqn-JE-eZ8"/>
+                            <constraint firstItem="idA-mz-jcH" firstAttribute="top" secondItem="OdY-Xc-ut1" secondAttribute="bottom" id="Sy7-LS-hFc"/>
+                            <constraint firstItem="idA-mz-jcH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UzL-Xs-BEG"/>
+                            <constraint firstItem="OdY-Xc-ut1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fcO-VB-eOX"/>
+                            <constraint firstItem="OdY-Xc-ut1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="64" id="gO7-pm-OTK"/>
+                            <constraint firstAttribute="trailing" secondItem="idA-mz-jcH" secondAttribute="trailing" id="oNn-ev-18c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="网易新闻" id="G81-zi-zGU"/>
+                    <connections>
+                        <outlet property="contentsScrollView" destination="idA-mz-jcH" id="C6H-bg-aOx"/>
+                        <outlet property="labelsScrollView" destination="OdY-Xc-ut1" id="kCA-O9-4df"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="425"/>
+        </scene>
+    </scenes>
+</document>
